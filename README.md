@@ -1,18 +1,25 @@
-# Challenges
-Checkout our Challenges!
+Clone the project
 
-### What we would love to see
-- Your ability to solve problems
-- Thinking beyond the explicit requirements
-- Clean code (use linters)
-- TDD techniques
+```bash
+  git clone https://github.com/cetinozgur/pego-hackernews
+```
 
-If you have any question, you can open an issue on GitHub or send us an email.
+Go to the project directory
 
-### FullStack
+```bash
+  cd pego-hackerbews
+```
 
-- [Fullstack Hacker News](fullstack.md) 
+Open two terminals and run the project with the following commands.
 
-### Frontend
-- [Frontend Hacker News](frontend.md) 
+Client
 
+```bash
+  cd client && npm install && npm run start
+```
+
+Server
+
+```bash
+ cd server && npm install && npm run compile & docker-compose up -d
+```

@@ -1,0 +1,41 @@
+type Query {
+  stories(offset: Int, limit: Int, storyType: String!): [Story!]!
+  story(id: ID!): Story
+  comments(offset: Int, limit: Int, storyId: ID!): [Comment!]
+  getFavsOfUsers(userEmail: String!): [Story!]
+}
+
+type Mutation {
+  addToFav(userEmail: String!, storyId: String!): String
+}
+
+type Story {
+  id: ID!
+  by: User!
+  descendants: Int
+  kids: [Comment!]
+  score: Int
+  time: Int
+  title: String
+  type: String!
+  url: String
+}
+
+type User {
+  id: ID!
+  about: String
+  created: Int
+  delay: Int
+  karma: Int
+  submitted: [Int!]
+}
+
+type Comment {
+  id: ID!
+  by: User
+  kids: [Int!]
+  parent: Int!
+  text: String
+  time: Int!
+  type: String
+}
